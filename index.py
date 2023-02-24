@@ -1,6 +1,10 @@
 from sarufi import Sarufi
+import os
 
-sarufi = Sarufi(username="dev.blax@gmail.com", password="sarSAR2020@")
+sarufi_username = os.environ.get('sarufi_username')
+sarufi_password = os.environ.get('sarufi_password')
+
+sarufi = Sarufi(username=sarufi_username, password=sarufi_password)
 
 # chatbot = sarufi.create_bot(name='blaxDog')  give id=423 name=blaxDog
 # print(chatbot)
@@ -49,4 +53,7 @@ chatbot = sarufi.get_bot(423)
 # print(chatbot.flow)
 
 chatbot.respond('Hey')
+
+username = os.environ.get('sarufi_username')
+print
 
